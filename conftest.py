@@ -9,10 +9,8 @@ def pytest_addoption(parser):
 
 @pytest.fixture(scope="function")
 def browser(request):
-    #language = request.config.getoption("language")
+    language = request.config.getoption("language")
     browser = webdriver.Chrome()
-    browser.implicitly_wait(10)
-    #browser.get(url='http://selenium1py.pythonanywhere.com/' + language + '/catalogue/coders-at-work_207/')
     yield browser
-    time.sleep(5)
+    time.sleep(3)
     browser.quit()
