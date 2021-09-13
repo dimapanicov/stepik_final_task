@@ -2,7 +2,6 @@ from .pages.product_page import ProductPage
 from .pages.basket_page import BasketPage
 from .pages.login_page import LoginPage
 import pytest
-import time
 
 
 @pytest.mark.need_review
@@ -51,7 +50,7 @@ def test_guest_should_see_login_link_on_product_page(browser):
 
 
 @pytest.mark.need_review
-def test_guest_can_go_to_login_page_from_product_page (browser):
+def test_guest_can_go_to_login_page_from_product_page(browser):
     link = "http://selenium1py.pythonanywhere.com/en-gb/catalogue/the-city-and-the-stars_95/"
     page = ProductPage(browser, link)
     page.open()
@@ -92,7 +91,3 @@ class TestUserAddToBasketFromProductPage(object):
         page = ProductPage(browser, link)
         page.open()
         page.should_not_be_success_message()
-
-
-
-

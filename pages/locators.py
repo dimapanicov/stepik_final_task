@@ -33,6 +33,6 @@ class BasePageLocators:
 
 
 class BasketPageLocators:
-    BASKET_LINK= (By.CSS_SELECTOR, ".basket-mini a.btn.btn-default")
+    BASKET_LINK = (By.CSS_SELECTOR, ".basket-mini a.btn.btn-default")
     MESSAGE_BASKET_IS_EMPTY = (By.CSS_SELECTOR, ".content #content_inner p")
     BASKET_SUMMARY = (By.CSS_SELECTOR, ".basket_summary")
